@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,9 @@
 		A9CC2F4B2683CBAA002CF667 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CC2F4A2683CBAA002CF667 /* ContentView.swift */; };
 		A9CC2F4D2683CBAE002CF667 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9CC2F4C2683CBAE002CF667 /* Assets.xcassets */; };
 		A9CC2F502683CBAE002CF667 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9CC2F4F2683CBAE002CF667 /* Preview Assets.xcassets */; };
+		A9CC2F592683CD21002CF667 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = A9CC2F582683CD21002CF667 /* ComposableArchitecture */; };
+		A9CC2F5C2683CE40002CF667 /* JokeApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CC2F5B2683CE40002CF667 /* JokeApiClient.swift */; };
+		A9CC2F5F2683D836002CF667 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CC2F5E2683D836002CF667 /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,8 @@
 		A9CC2F4C2683CBAE002CF667 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9CC2F4F2683CBAE002CF667 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A9CC2F512683CBAE002CF667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9CC2F5B2683CE40002CF667 /* JokeApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeApiClient.swift; sourceTree = "<group>"; };
+		A9CC2F5E2683D836002CF667 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9CC2F592683CD21002CF667 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +58,8 @@
 		A9CC2F472683CBAA002CF667 /* JokeApp */ = {
 			isa = PBXGroup;
 			children = (
+				A9CC2F5D2683D829002CF667 /* AppState */,
+				A9CC2F5A2683CE35002CF667 /* Network */,
 				A9CC2F482683CBAA002CF667 /* JokeAppApp.swift */,
 				A9CC2F4A2683CBAA002CF667 /* ContentView.swift */,
 				A9CC2F4C2683CBAE002CF667 /* Assets.xcassets */,
@@ -67,6 +75,22 @@
 				A9CC2F4F2683CBAE002CF667 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A9CC2F5A2683CE35002CF667 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A9CC2F5B2683CE40002CF667 /* JokeApiClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A9CC2F5D2683D829002CF667 /* AppState */ = {
+			isa = PBXGroup;
+			children = (
+				A9CC2F5E2683D836002CF667 /* AppState.swift */,
+			);
+			path = AppState;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +109,9 @@
 			dependencies = (
 			);
 			name = JokeApp;
+			packageProductDependencies = (
+				A9CC2F582683CD21002CF667 /* ComposableArchitecture */,
+			);
 			productName = JokeApp;
 			productReference = A9CC2F452683CBAA002CF667 /* JokeApp.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +139,9 @@
 				Base,
 			);
 			mainGroup = A9CC2F3C2683CBAA002CF667;
+			packageReferences = (
+				A9CC2F572683CD21002CF667 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = A9CC2F462683CBAA002CF667 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +170,8 @@
 			files = (
 				A9CC2F4B2683CBAA002CF667 /* ContentView.swift in Sources */,
 				A9CC2F492683CBAA002CF667 /* JokeAppApp.swift in Sources */,
+				A9CC2F5C2683CE40002CF667 /* JokeApiClient.swift in Sources */,
+				A9CC2F5F2683D836002CF667 /* AppState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +358,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A9CC2F572683CD21002CF667 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.19.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A9CC2F582683CD21002CF667 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9CC2F572683CD21002CF667 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A9CC2F3D2683CBAA002CF667 /* Project object */;
 }
