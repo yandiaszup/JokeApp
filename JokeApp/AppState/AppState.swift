@@ -29,6 +29,7 @@ enum JokeAction: Equatable {
     case dismissedAlert
     case randomJokeTapped
     case favoriteJokeTapped
+    case unFavoriteJokeTapped(id: String)
     case randomJokeResponse(Result<JokeEntity, NetworkError>)
 }
 
@@ -41,6 +42,13 @@ let appReducer = Reducer<JokeState, JokeAction, JokeEnviroment> { state, action,
         } else {
             state.currentJoke.isFavorite = true
             state.favoriteJokes[state.currentJoke.id] = state.currentJoke
+        }
+        return .none
+    
+    case .unFavoriteJokeTapped(let  id):
+        state.favoriteJokes[id] = nil
+        if state.currentJoke.id == id {
+            state.currentJoke.isFavorite = false
         }
         return .none
         

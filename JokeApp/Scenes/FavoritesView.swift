@@ -21,6 +21,11 @@ struct FavoritesView: View {
                             Text(joke.punchline)
                         }
                         Spacer()
+                        Button(action: {
+                            viewStore.send(.unFavoriteJokeTapped(id: joke.id))
+                        }) {
+                            Image(systemName: "minus.circle.fill")
+                        }
                     }
                     .purbleBox()
                 }
