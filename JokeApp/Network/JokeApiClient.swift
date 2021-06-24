@@ -13,6 +13,7 @@ struct Response: Decodable {
 }
 
 struct JokeEntity: Decodable, Equatable {
+    let _id: String
     let setup: String
     let punchline: String
 }
@@ -31,17 +32,20 @@ struct JokeApiClient: JokeRepository {
     var session: URLSession = URLSession.shared
     
     func getJoke() -> AnyPublisher<JokeEntity, NetworkError> {
-        session.dataTaskPublisher(for: buildUrlRequest())
-            .map(\.data)
-            .decode(type: Response.self, decoder: JSONDecoder())
-            .tryMap({ response in
-                if let joke = response.body.first {
-                    return joke
-                } else {
-                    throw NetworkError.apiError
-                }
-            })
-            .mapError { error in NetworkError.networkError }
+//        session.dataTaskPublisher(for: buildUrlRequest())
+//            .map(\.data)
+//            .decode(type: Response.self, decoder: JSONDecoder())
+//            .tryMap({ response in
+//                if let joke = response.body.first {
+//                    return joke
+//                } else {
+//                    throw NetworkError.apiError
+//                }
+//            })
+//            .mapError { error in NetworkError.networkError }
+//            .eraseToAnyPublisher()
+        return Just(JokeEntity(_id: "00002", setup: "Bad at golf?", punchline: "Join the club."))
+            .setFailureType(to: NetworkError.self)
             .eraseToAnyPublisher()
     }
     

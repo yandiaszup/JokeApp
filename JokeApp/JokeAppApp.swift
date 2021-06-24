@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct JokeAppApp: App {
@@ -14,10 +15,22 @@ struct JokeAppApp: App {
     } receiveValue: { joke in
         print(joke)
     }
-
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(store: Store(
+                initialState: JokeState(
+                    currentJoke: Joke(id: "00001",
+                                      setup: "setup",
+                                      punchline: "punchline"),
+                    favoriteJokes: [:
+                    ]
+                ),
+                reducer: appReducer.debug(),
+                environment: JokeEnviroment(
+                    jokeApiClient: JokeApiClient()
+                )
+            ))
         }
     }
 }

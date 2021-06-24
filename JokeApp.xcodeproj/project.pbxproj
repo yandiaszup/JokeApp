@@ -14,6 +14,7 @@
 		A9CC2F592683CD21002CF667 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = A9CC2F582683CD21002CF667 /* ComposableArchitecture */; };
 		A9CC2F5C2683CE40002CF667 /* JokeApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CC2F5B2683CE40002CF667 /* JokeApiClient.swift */; };
 		A9CC2F5F2683D836002CF667 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CC2F5E2683D836002CF667 /* AppState.swift */; };
+		A9CC2F6126850A76002CF667 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CC2F6026850A76002CF667 /* FavoritesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		A9CC2F512683CBAE002CF667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9CC2F5B2683CE40002CF667 /* JokeApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeApiClient.swift; sourceTree = "<group>"; };
 		A9CC2F5E2683D836002CF667 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		A9CC2F6026850A76002CF667 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				A9CC2F472683CBAA002CF667 /* JokeApp */,
-				A9CC2F462683CBAA002CF667 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,18 +54,20 @@
 				A9CC2F452683CBAA002CF667 /* JokeApp.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		A9CC2F472683CBAA002CF667 /* JokeApp */ = {
 			isa = PBXGroup;
 			children = (
-				A9CC2F5D2683D829002CF667 /* AppState */,
-				A9CC2F5A2683CE35002CF667 /* Network */,
-				A9CC2F482683CBAA002CF667 /* JokeAppApp.swift */,
-				A9CC2F4A2683CBAA002CF667 /* ContentView.swift */,
-				A9CC2F4C2683CBAE002CF667 /* Assets.xcassets */,
 				A9CC2F512683CBAE002CF667 /* Info.plist */,
+				A9CC2F482683CBAA002CF667 /* JokeAppApp.swift */,
+				A9CC2F4C2683CBAE002CF667 /* Assets.xcassets */,
+				A9CC2F5A2683CE35002CF667 /* Network */,
 				A9CC2F4E2683CBAE002CF667 /* Preview Content */,
+				A9CC2F462683CBAA002CF667 /* Products */,
+				A9CC2F5D2683D829002CF667 /* AppState */,
+				A9CC2F6226850A84002CF667 /* Scenes */,
 			);
 			path = JokeApp;
 			sourceTree = "<group>";
@@ -91,6 +94,15 @@
 				A9CC2F5E2683D836002CF667 /* AppState.swift */,
 			);
 			path = AppState;
+			sourceTree = "<group>";
+		};
+		A9CC2F6226850A84002CF667 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A9CC2F4A2683CBAA002CF667 /* ContentView.swift */,
+				A9CC2F6026850A76002CF667 /* FavoritesView.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9CC2F6126850A76002CF667 /* FavoritesView.swift in Sources */,
 				A9CC2F4B2683CBAA002CF667 /* ContentView.swift in Sources */,
 				A9CC2F492683CBAA002CF667 /* JokeAppApp.swift in Sources */,
 				A9CC2F5C2683CE40002CF667 /* JokeApiClient.swift in Sources */,
