@@ -44,9 +44,9 @@ struct JokeApiClient: JokeRepository {
 //            })
 //            .mapError { error in NetworkError.networkError }
 //            .eraseToAnyPublisher()
-        return Just(JokeEntity(_id: "00002", setup: "Bad at golf?", punchline: "Join the club."))
-            .setFailureType(to: NetworkError.self)
-            .eraseToAnyPublisher()
+        let success = Result<JokeEntity, NetworkError>.success(JokeEntity(_id: "00002", setup: "Bad at golf?", punchline: "Join the club.")).publisher.eraseToAnyPublisher()
+        let failure = Result<JokeEntity, NetworkError>.failure(NetworkError.networkError).publisher.eraseToAnyPublisher()
+        return failure
     }
     
     private func buildUrlRequest() -> URLRequest {

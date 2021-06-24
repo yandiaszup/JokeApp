@@ -16,6 +16,7 @@ struct Joke: Equatable, Identifiable {
 }
 
 struct JokeState: Equatable {
+    var isShowingAlert: Bool = false
     var currentJoke: Joke
     var favoriteJokes: [String: Joke]
 }
@@ -25,6 +26,7 @@ struct JokeEnviroment {
 }
 
 enum JokeAction: Equatable {
+    case dismissedAlert
     case randomJokeTapped
     case favoriteJokeTapped
     case randomJokeResponse(Result<JokeEntity, NetworkError>)
@@ -58,6 +60,11 @@ let appReducer = Reducer<JokeState, JokeAction, JokeEnviroment> { state, action,
         return .none
         
     case .randomJokeResponse(.failure):
+        state.isShowingAlert = true
+        return .none
+        
+    case .dismissedAlert:
+        state.isShowingAlert = false
         return .none
     }
 }

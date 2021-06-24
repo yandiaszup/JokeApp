@@ -22,6 +22,18 @@ struct ContentView: View {
                     .purbleBox()
                     .padding()
                 }
+                .alert(
+                    isPresented: viewStore.binding(
+                        get: \.isShowingAlert,
+                        send: JokeAction.dismissedAlert
+                    )
+                ) {
+                    Alert(
+                        title: Text("Error ❌"),
+                        message: Text("Error trying to get a joke"),
+                        dismissButton: .default(Text("Got it!"))
+                    )
+                }
                 .navigationTitle("Uncle Jokes")
                 .navigationBarItems(trailing: NavigationLink(destination: FavoritesView(store: store)) {
                     Text("Favorites")
