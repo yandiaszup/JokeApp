@@ -12,7 +12,21 @@ struct Joke: Equatable, Identifiable {
     let id: String
     let setup: String
     let punchline: String
-    var isFavorite: Bool = false
+    var isFavorite: Bool
+    
+    init(entity: JokeEntity, isFavorite: Bool = false) {
+        self.id = entity._id
+        self.setup = entity.setup
+        self.punchline = entity.punchline
+        self.isFavorite = isFavorite
+    }
+    
+    init(id: String, setup: String, punchline: String, isFavorite: Bool = false) {
+        self.id = id
+        self.setup = setup
+        self.punchline = punchline
+        self.isFavorite = isFavorite
+    }
 }
 
 struct JokeState: Equatable {
@@ -63,7 +77,7 @@ let appReducer = Reducer<JokeState, JokeAction, JokeEnviroment> { state, action,
         if let joke = state.favoriteJokes[entity._id] {
             state.currentJoke = joke
         } else {
-            state.currentJoke = .init(id: entity._id, setup: entity.setup, punchline: entity.punchline)
+            state.currentJoke = .init(entity: entity)
         }
         return .none
         
