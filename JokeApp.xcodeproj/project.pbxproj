@@ -41,6 +41,7 @@
 		A9CC2F6726861928002CF667 /* JokeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JokeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9CC2F6926861928002CF667 /* JokeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeAppTests.swift; sourceTree = "<group>"; };
 		A9CC2F6B26861928002CF667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9CC2F71268665BA002CF667 /* NetworkPublisher.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NetworkPublisher.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 		A9CC2F472683CBAA002CF667 /* JokeApp */ = {
 			isa = PBXGroup;
 			children = (
+				A9CC2F71268665BA002CF667 /* NetworkPublisher.playground */,
 				A9CC2F512683CBAE002CF667 /* Info.plist */,
 				A9CC2F482683CBAA002CF667 /* JokeAppApp.swift */,
 				A9CC2F4C2683CBAE002CF667 /* Assets.xcassets */,
