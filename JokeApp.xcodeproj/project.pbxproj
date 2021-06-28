@@ -16,6 +16,17 @@
 		A9CC2F5F2683D836002CF667 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CC2F5E2683D836002CF667 /* AppState.swift */; };
 		A9CC2F6126850A76002CF667 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CC2F6026850A76002CF667 /* FavoritesView.swift */; };
 		A9CC2F6A26861928002CF667 /* JokeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CC2F6926861928002CF667 /* JokeAppTests.swift */; };
+		A9CC2F76268A0F01002CF667 /* JokeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CC2F75268A0F01002CF667 /* JokeAppUITests.swift */; };
+		A9CC2F78268A0F5D002CF667 /* SwiftUI+SnapshotTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CC2F77268A0F5D002CF667 /* SwiftUI+SnapshotTesting.swift */; };
+		A9CC2F7A268A1187002CF667 /* JokeApiClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CC2F79268A1187002CF667 /* JokeApiClientStub.swift */; };
+		A9CC2F7E268A16D4002CF667 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = A9CC2F7D268A16D4002CF667 /* SnapshotTesting */; };
+		A9CC2F86268A17B8002CF667 /* testRandomJoke.2.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CC2F84268A17B8002CF667 /* testRandomJoke.2.png */; };
+		A9CC2F8A268A18B1002CF667 /* testFavoriteJoke.2.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CC2F88268A18B1002CF667 /* testFavoriteJoke.2.png */; };
+		A9CC2F8B268A18B1002CF667 /* testFavoriteJoke.1.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CC2F89268A18B1002CF667 /* testFavoriteJoke.1.png */; };
+		A9CC2F8D268A199B002CF667 /* testRandomJoke.1.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CC2F8C268A199B002CF667 /* testRandomJoke.1.png */; };
+		A9CC2F8F268A19F3002CF667 /* testFavoriteJoke.3.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CC2F8E268A19F3002CF667 /* testFavoriteJoke.3.png */; };
+		A9CC2F92268A1AFF002CF667 /* testUnfavoriteJoke.2.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CC2F90268A1AFF002CF667 /* testUnfavoriteJoke.2.png */; };
+		A9CC2F93268A1AFF002CF667 /* testUnfavoriteJoke.1.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CC2F91268A1AFF002CF667 /* testUnfavoriteJoke.1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +53,16 @@
 		A9CC2F6926861928002CF667 /* JokeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeAppTests.swift; sourceTree = "<group>"; };
 		A9CC2F6B26861928002CF667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9CC2F71268665BA002CF667 /* NetworkPublisher.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NetworkPublisher.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A9CC2F75268A0F01002CF667 /* JokeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeAppUITests.swift; sourceTree = "<group>"; };
+		A9CC2F77268A0F5D002CF667 /* SwiftUI+SnapshotTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+SnapshotTesting.swift"; sourceTree = "<group>"; };
+		A9CC2F79268A1187002CF667 /* JokeApiClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeApiClientStub.swift; sourceTree = "<group>"; };
+		A9CC2F84268A17B8002CF667 /* testRandomJoke.2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testRandomJoke.2.png; sourceTree = "<group>"; };
+		A9CC2F88268A18B1002CF667 /* testFavoriteJoke.2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testFavoriteJoke.2.png; sourceTree = "<group>"; };
+		A9CC2F89268A18B1002CF667 /* testFavoriteJoke.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testFavoriteJoke.1.png; sourceTree = "<group>"; };
+		A9CC2F8C268A199B002CF667 /* testRandomJoke.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testRandomJoke.1.png; sourceTree = "<group>"; };
+		A9CC2F8E268A19F3002CF667 /* testFavoriteJoke.3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testFavoriteJoke.3.png; sourceTree = "<group>"; };
+		A9CC2F90268A1AFF002CF667 /* testUnfavoriteJoke.2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testUnfavoriteJoke.2.png; sourceTree = "<group>"; };
+		A9CC2F91268A1AFF002CF667 /* testUnfavoriteJoke.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testUnfavoriteJoke.1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9CC2F7E268A16D4002CF667 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,10 +155,44 @@
 		A9CC2F6826861928002CF667 /* JokeAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				A9CC2F7F268A16F0002CF667 /* __Snapshots__ */,
+				A9CC2F7B268A12F6002CF667 /* TestingHelpers */,
 				A9CC2F6926861928002CF667 /* JokeAppTests.swift */,
 				A9CC2F6B26861928002CF667 /* Info.plist */,
+				A9CC2F75268A0F01002CF667 /* JokeAppUITests.swift */,
 			);
 			path = JokeAppTests;
+			sourceTree = "<group>";
+		};
+		A9CC2F7B268A12F6002CF667 /* TestingHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				A9CC2F79268A1187002CF667 /* JokeApiClientStub.swift */,
+				A9CC2F77268A0F5D002CF667 /* SwiftUI+SnapshotTesting.swift */,
+			);
+			path = TestingHelpers;
+			sourceTree = "<group>";
+		};
+		A9CC2F7F268A16F0002CF667 /* __Snapshots__ */ = {
+			isa = PBXGroup;
+			children = (
+				A9CC2F83268A17B8002CF667 /* JokeAppUITests */,
+			);
+			path = __Snapshots__;
+			sourceTree = "<group>";
+		};
+		A9CC2F83268A17B8002CF667 /* JokeAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A9CC2F91268A1AFF002CF667 /* testUnfavoriteJoke.1.png */,
+				A9CC2F90268A1AFF002CF667 /* testUnfavoriteJoke.2.png */,
+				A9CC2F89268A18B1002CF667 /* testFavoriteJoke.1.png */,
+				A9CC2F88268A18B1002CF667 /* testFavoriteJoke.2.png */,
+				A9CC2F8E268A19F3002CF667 /* testFavoriteJoke.3.png */,
+				A9CC2F8C268A199B002CF667 /* testRandomJoke.1.png */,
+				A9CC2F84268A17B8002CF667 /* testRandomJoke.2.png */,
+			);
+			path = JokeAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +232,9 @@
 				A9CC2F6D26861928002CF667 /* PBXTargetDependency */,
 			);
 			name = JokeAppTests;
+			packageProductDependencies = (
+				A9CC2F7D268A16D4002CF667 /* SnapshotTesting */,
+			);
 			productName = JokeAppTests;
 			productReference = A9CC2F6726861928002CF667 /* JokeAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -209,6 +268,7 @@
 			mainGroup = A9CC2F3C2683CBAA002CF667;
 			packageReferences = (
 				A9CC2F572683CD21002CF667 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				A9CC2F7C268A16D4002CF667 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = A9CC2F462683CBAA002CF667 /* Products */;
 			projectDirPath = "";
@@ -234,6 +294,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9CC2F8D268A199B002CF667 /* testRandomJoke.1.png in Resources */,
+				A9CC2F93268A1AFF002CF667 /* testUnfavoriteJoke.1.png in Resources */,
+				A9CC2F8B268A18B1002CF667 /* testFavoriteJoke.1.png in Resources */,
+				A9CC2F8F268A19F3002CF667 /* testFavoriteJoke.3.png in Resources */,
+				A9CC2F92268A1AFF002CF667 /* testUnfavoriteJoke.2.png in Resources */,
+				A9CC2F86268A17B8002CF667 /* testRandomJoke.2.png in Resources */,
+				A9CC2F8A268A18B1002CF667 /* testFavoriteJoke.2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +323,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9CC2F78268A0F5D002CF667 /* SwiftUI+SnapshotTesting.swift in Sources */,
+				A9CC2F76268A0F01002CF667 /* JokeAppUITests.swift in Sources */,
+				A9CC2F7A268A1187002CF667 /* JokeApiClientStub.swift in Sources */,
 				A9CC2F6A26861928002CF667 /* JokeAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +578,14 @@
 				minimumVersion = 0.19.0;
 			};
 		};
+		A9CC2F7C268A16D4002CF667 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -515,6 +593,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A9CC2F572683CD21002CF667 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		A9CC2F7D268A16D4002CF667 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9CC2F7C268A16D4002CF667 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
